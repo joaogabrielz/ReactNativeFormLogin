@@ -9,10 +9,8 @@ const FormCreateAccount = ({ onPress }) => {
   const [phone, setPhone] = useState("");
 
   const handleDateOfBirthChange = (text) => {
-    // Verifica se o input está no formato MM/DD/YYYY
     const cleanedText = text.replace(/[^0-9]/g, "");
 
-    // Formata a data como "DD/MM/YYYY"
     if (cleanedText.length <= 2) {
       setBirthday(cleanedText);
     } else if (cleanedText.length <= 4) {
@@ -29,10 +27,8 @@ const FormCreateAccount = ({ onPress }) => {
   };
 
   const handlePhoneChange = (text) => {
-    // Remove todos os caracteres não numéricos
     const cleanedText = text.replace(/[^0-9]/g, "");
 
-    // Formata o telefone como "(XX) XXXXX-XXXX"
     if (cleanedText.length <= 2) {
       setPhone(cleanedText);
     } else if (cleanedText.length <= 7) {

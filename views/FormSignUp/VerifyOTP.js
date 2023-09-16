@@ -85,6 +85,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     borderRadius: 10,
     backgroundColor: "transparent",
+    maxWidth: 50,
   },
   checkboxContainer: {
     marginTop: 10,

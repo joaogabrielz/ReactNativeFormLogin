@@ -2,15 +2,12 @@ import {
   View,
   StyleSheet,
   ScrollView,
-  TouchableOpacity,
   TextInput as TextInputNormal,
 } from "react-native";
 import React, { useState } from "react";
 import {
   Button,
-  TextInput,
   Text,
-  Avatar,
   ProgressBar,
   MD3Colors,
 } from "react-native-paper";
@@ -42,14 +39,6 @@ export default function FormSignUp({ onPressAdd }) {
   ];
 
   const [currentStep, setCurrentStep] = useState(0);
-
-  // const handlePress = (email) => {
-  //   // onPressAdd(email);
-  //   console.log("\n");
-  //   console.log(email);
-
-  //   navigation.navigate("");
-  // };
 
   const nextStep = () => {
     if (currentStep < STEPS.length - 1) {
@@ -116,6 +105,9 @@ const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
   },
+  main: {
+    marginTop: 50
+  },
   button: {
     marginTop: 20,
     padding: 10,
@@ -126,7 +118,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    height: 80,
+    height: 100,
   },
   title: {
     textAlign: "left",
@@ -139,6 +131,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     gap: 20,
     marginTop: 50,
+    maxHeight: 80,
     marginHorizontal: 30,
   },
   button: {

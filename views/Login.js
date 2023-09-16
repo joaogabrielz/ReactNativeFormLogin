@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
   main: {
-    marginTop: 20,
+    marginTop: 100,
   },
   button: {
     marginTop: 20,
@@ -66,8 +66,10 @@ const styles = StyleSheet.create({
 
   socialButtons: {
     marginTop: 50,
+    marginBottom: 30
   },
   createAccount: {
     marginTop: 20,
+    marginBottom: 30
   },
 });

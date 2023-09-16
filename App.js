@@ -15,11 +15,24 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Login"  options={{ title: '' }}>
+        <Stack.Screen name="Login" options={{ title: "", headerShown: false }}>
           {(props) => <Login {...props} onPressAdd={pressAdd} />}
         </Stack.Screen>
-        <Stack.Screen name="CreateAccount" component={CreateAccount}  options={{ title: '' }}/>
-        <Stack.Screen name="FormSignUp" component={FormSignUp}  options={{ title: '' , headerBackVisible: false,   headerTitleAlign: 'center',}}/>
+        <Stack.Screen
+          name="CreateAccount"
+          component={CreateAccount}
+          options={{ title: "" }}
+        />
+        <Stack.Screen
+          name="FormSignUp"
+          component={FormSignUp}
+          options={{
+            title: "",
+            headerBackVisible: false,
+            headerTitleAlign: "center",
+            headerShown: false
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
